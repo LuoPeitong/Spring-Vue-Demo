@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import axios from 'axios'
+import store from './store'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
@@ -26,11 +27,31 @@ Vue.config.productionTip = false
 
 Vue.use(ElementUI)
 
+// 在路由跳转前进行权限验证
+router.beforeEach((to, from, next) => {
+  // 判断目标路由是否需要进行权限验证
+  if (to.meta.requireAuth) {
+    if (store.state.user.username) {
+      next()
+    } else {
+      next({
+        path: 'login',
+        // 将用户想要访问的页面路径保存下来，以便在登录成功后可以跳转回该页面。
+        query: {redirect: to.fullPath}
+      })
+    }
+  } else {
+    next()
+  }
+}
+)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   render: h => h(App),
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
