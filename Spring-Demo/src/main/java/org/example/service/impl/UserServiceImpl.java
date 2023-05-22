@@ -17,9 +17,9 @@ public class UserServiceImpl implements UserService {
     public Result login(User user) {
         User sqlUser = iUserDao.queryByUsername(user);
         if (user.getPassword().equals(sqlUser.getPassword())) {
-            return new Result(200);
+            return Result.ok(sqlUser,"登录验证通过");
         } else {
-            return new Result(400);
+            return Result.error();
         }
     }
 }

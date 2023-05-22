@@ -22,7 +22,7 @@ public class UserController {
             return userService.login(user);
         } catch (Exception e) {
             System.out.println(e);
-            return new Result(400);
+            return Result.error();
         }
     }
 }

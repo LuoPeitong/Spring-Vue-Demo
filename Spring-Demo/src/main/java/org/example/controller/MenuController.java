@@ -20,7 +20,7 @@ public class MenuController {
             return menuService.getMenu();
         } catch (Exception e) {
             System.out.println(e);
-            return Result.error("出错了！");
+            return Result.error();
         }
     }
 }
