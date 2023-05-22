@@ -1,6 +1,5 @@
 <template>
-  <el-tabs v-model="$store.state.editableTabsValue" @tab-click="handleClick" @edit="handleTabsEdit" type="card"
-           closable>
+  <el-tabs v-model="$store.state.editableTabsValue" @edit="handleTabsEdit" type="card" closable>
     <el-tab-pane v-for="(item) in $store.state.editableTabs" :key="item.id" :label="item.title" :name="item.id">
       <keep-alive>
         <component :is='item.content'></component>
@@ -11,15 +10,18 @@
 
 <script>
 // 用import添加标签页涉及到的Vue组件
+import func1 from '../func/func1'
+import func2 from '../func/func2'
+import func3 from '../func/func3'
 export default {
   name: 'Tabs',
   components: {
     // 标签页涉及到的Vue组件需要在这里注册
+    func1,
+    func2,
+    func3
   },
   methods: {
-    handleClick (tab) {
-      this.$store.commit('saveEditableTabsValue', tab.id)
-    },
     handleTabsEdit (targetName, action) {
       if (action === 'remove') {
         // 拷贝tabs列表
