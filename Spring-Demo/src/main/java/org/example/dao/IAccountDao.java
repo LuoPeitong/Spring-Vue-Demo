@@ -10,9 +10,9 @@ import java.util.List;
 @Repository
 public interface IAccountDao {
 
-    @Select("select * from account")
+    @Select("SELECT * FROM account")
     List<Account> findAll();
 
-    @Insert("insert into account (name,money) value(#{name},#{money})")
+    @Insert("INSERT INTO account (name,money) VALUES(#{name},#{money})")
     void saveAccount(Account account);
 }

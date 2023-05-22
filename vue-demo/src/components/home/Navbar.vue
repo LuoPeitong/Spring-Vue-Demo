@@ -6,7 +6,8 @@
         <i :class="nav.img"></i>
         <span>{{ nav.title }}</span>
       </template>
-      <el-menu-item v-for="(s_nav, s_key) in nav.funcList" :key="s_key" :index="s_nav.id" @click="active(s_nav)" style="min-width: 100px">
+      <el-menu-item v-for="(s_nav, s_key) in nav.funcList" :key="s_key" :index="s_nav.id" @click="active(s_nav)"
+                    style="min-width: 100px">
         <span>{{ s_nav.title }}</span>
       </el-menu-item>
     </el-submenu>

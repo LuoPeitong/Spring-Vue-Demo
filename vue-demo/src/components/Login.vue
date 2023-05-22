@@ -43,7 +43,6 @@ export default {
             let path = this.$route.query.redirect
             this.$router.replace({path: path === '/' || path === undefined ? '/index' : path})
           }
-          console.log(successResponse)
         })
         .catch(failResponse => {
         })
@@ -63,20 +62,23 @@ export default {
   border: 1px solid #eaeaea;
   box-shadow: 0 0 25px #cac6c6;
 }
+
 .login_title {
   margin: 0px auto 40px auto;
   text-align: center;
   color: #505458;
 }
+
 #poster {
-  background:url("../assets/eva.jpg") no-repeat;
+  background: url("../assets/eva.jpg") no-repeat;
   background-position: center;
   height: 100%;
   width: 100%;
   background-size: cover;
   position: fixed;
 }
-body{
+
+body {
   margin: 0px;
 }
 </style>

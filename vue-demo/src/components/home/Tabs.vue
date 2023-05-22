@@ -13,6 +13,7 @@
 import func1 from '../func/func1'
 import func2 from '../func/func2'
 import func3 from '../func/func3'
+
 export default {
   name: 'Tabs',
   components: {
