@@ -58,3 +58,9 @@
 5. 高德地图API的demo（多边形编辑器、轨迹回放、区域闯入）
 6. websocket的demo
 7. 后端日志（Log4j2的demo）
+
+### 更新日志
+
+**2023-06-05**  新增工具类`ObjectUtil.haveEmpty` 
+
+作用：对参数object中的属性进行判断，如果**属性类型为String且为空串**，则返回`Result.error`，错误代码为201。
