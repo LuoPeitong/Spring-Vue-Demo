@@ -4,7 +4,7 @@
 
 构建后端 SSM 框架：[教程](https://yichun.blog.csdn.net/article/details/100192558) *非常详细的介绍SSM的整合过程*
 
-选用SSM而不是SpringBoot的原因是，感觉SSM更自由，而且本项目才用的配置方式并没有很复杂。
+选用SSM而不是SpringBoot的原因是，感觉SSM更自由，而且本项目采用的配置方式并没有很复杂。
 
 ### 前端项目中各配置文件
 
