@@ -9,7 +9,7 @@ public class Result {
 
     private Object object;
 
-    private String meesage;
+    private String message;
 
     private long timestamp = System.currentTimeMillis();
 
@@ -23,14 +23,14 @@ public class Result {
     public Result(int code, Object object, String message) {
         this.code = code;
         this.object = object;
-        this.meesage = message;
+        this.message = message;
     }
 
     public static Result ok(String message) {
         Result result = new Result();
         result.setCode(200);
         result.setObject(null);
-        result.setMeesage(message);
+        result.setMessage(message);
         return result;
     }
 
@@ -38,13 +38,13 @@ public class Result {
         Result result = new Result();
         result.setCode(200);
         result.setObject(object);
-        result.setMeesage(message);
+        result.setMessage(message);
         return result;
     }
 
     public static Result error() {
         Result result = new Result();
-        result.setMeesage("碰到了异常情况");
+        result.setMessage("碰到了异常情况");
         result.setCode(400);
         result.setObject(null);
         return result;
@@ -52,7 +52,7 @@ public class Result {
 
     public static Result error(String message) {
         Result result = new Result();
-        result.setMeesage(message);
+        result.setMessage(message);
         result.setCode(400);
         result.setObject(null);
         return result;
@@ -60,7 +60,7 @@ public class Result {
 
     public static Result error(int code, String message) {
         Result result = new Result();
-        result.setMeesage(message);
+        result.setMessage(message);
         result.setCode(code);
         result.setObject(null);
         return result;
