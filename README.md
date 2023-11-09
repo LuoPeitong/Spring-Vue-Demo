@@ -52,12 +52,11 @@
 ### 待实现/解决的问题
 
 1. 跨域后导致后端session失效
-2. 新增STMP的demo
-3. 新增ECharts的demo
-4. 新增文件上传下载的demo（excel导出、导入、下载）
-5. 高德地图API的demo（多边形编辑器、轨迹回放、区域闯入）
-6. websocket的demo
-7. 后端日志（Log4j2的demo）
+2. 整合websocket
+3. 整合Log4j2
+4. 拦截器
+5. Redis
+6. 任务调度框架(Quartz或Spring Task）
 
 ### 更新日志
 
