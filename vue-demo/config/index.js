@@ -12,7 +12,7 @@ module.exports = {
     proxyTable: {
       '/api': {
         // 代理的目标地址，即后端服务器的地址。
-        target: 'http://127.0.0.1:8443/Spring_Demo_war_exploded/',
+        target: 'http://localhost:8443/Spring_Demo_war',
         // 在代理请求时，将请求头中的 Origin 字段设置为目标地址，以实现跨域请求。
         changeOrigin: true,
         // 以`/api`开头的路径将被重写为空字符串，即去除`/api`前缀。
