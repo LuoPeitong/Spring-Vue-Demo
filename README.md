@@ -63,3 +63,5 @@
 **2023-06-05**  新增工具类`ObjectUtil.haveEmpty` 
 
 作用：对参数object中的属性进行判断，如果**属性类型为String且为空串**，则返回`Result.error`，错误代码为201。
+
+**2025-07-17** 需要使用v21.0.0版本的nodejs（建议使用nvm）
